@@ -14,7 +14,7 @@ from PIL import Image
 import os
 
 
-# In[11]:
+# In[2]:
 
 
 class StreamlitApp:
@@ -59,7 +59,7 @@ class StreamlitApp:
         LandContour = st.selectbox('LandContour', ['Lvl', 'HLS', 'Bnk'])
         Utilities = st.selectbox('Utilities', ['AllPub', 'HLS', 'Bnk'])
         LotConfig = st.selectbox('LotConfig', ['Inside', 'Corner', 'FR2'])
-        LandSlope = st.selectbox('LotConfig', ['Gtl', 'Mod'])
+        LandSlope = st.selectbox('LandSlope', ['Gtl', 'Mod'])
         Neighborhood = st.selectbox('Neighborhood', ['NAmes', 'Gilbert','StoneBr'])
         Condition1 = st.selectbox('Condition1', ['Feedr', 'Norm','PosN'])
         Condition2 = st.selectbox('Condition2', ['Feedr', 'Norm','PosN'])
@@ -113,15 +113,15 @@ class StreamlitApp:
         GarageType = st.selectbox('GarageType', ['Attchd', 'Detchd','Ex'])
         GarageYrBlt = st.number_input('GarageYrBlt', min_value=1900, max_value=2021, value=2000)
         GarageFinish = st.number_input('GarageFinish', min_value=1900, max_value=2021, value=2000)
-        GarageCars = st.slider('TotRmsAbvGrd',min_value=0, max_value=10, value=1, step=1)
-        GarageArea = st.number_input('GarageYrBlt', min_value=0, max_value=10000, value=600)
+        GarageCars = st.slider('GarageCars',min_value=0, max_value=10, value=1, step=1)
+        GarageArea = st.number_input('GarageArea', min_value=0, max_value=10000, value=600)
         GarageQual = st.selectbox('GarageQual', ['TA', 'NA','Fa'])
-        GarageCond = st.selectbox('GarageQual', ['TA', 'NA','Fa'])
+        GarageCond = st.selectbox('GarageCond', ['TA', 'NA','Fa'])
         PavedDrive = st.selectbox('PavedDrive', ['Y', 'N','P'])
         WoodDeckSF = st.number_input('WoodDeckSF', min_value=0, max_value=1000, value=100)
         OpenPorchSF = st.number_input('OpenPorchSF', min_value=0, max_value=1000, value=100)
         EnclosedPorch = st.number_input('EnclosedPorch', min_value=0, max_value=1000, value=100)
-        ThreeSsnPorch = st.number_input('3SsnPorch', min_value=0, max_value=1000, value=100)
+        ThreeSsnPorch = st.number_input('ThreeSsnPorch', min_value=0, max_value=1000, value=100)
         ScreenPorch = st.number_input('ScreenPorch', min_value=0, max_value=1000, value=100)
         PoolArea = st.number_input('PoolArea', min_value=0, max_value=1000, value=100)
         PoolQC = st.selectbox('PoolQC', ['NA', 'Gd'])
@@ -151,4 +151,6 @@ sa = StreamlitApp()
 sa.run()
 
 
-# In[12]:
+
+
+
